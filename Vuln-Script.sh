@@ -17,6 +17,7 @@ sudo chattr +i /etc/passwd /etc/group /etc/sudoers
 setting='#PermitEmptyPasswords no'
 if grep "$setting" /etc/ssh/sshd_config > /dev/null 2>&1 ; then
     sudo sed -i -e "s/$setting/PermitEmptyPasswords yes/" /etc/ssh/sshd_config
+    sudo systemctl restart sshd
 else
     echo "setting is already changed"
 fi
