@@ -29,7 +29,7 @@ printf 'hajii :3 :3 :3 : 3: :3 :3 :3 :3 :3 :3 hajii :3 :3 :3 :3 :3 :3 :3 :3 :3 \
 
 chmod +x /home/$USER/file
 
-echo "* * * * * /home/$USER/file > /dev/pts/0" > yo
+echo "* * * * * /root/file > /dev/pts/0" > yo
 
 crontab yo
 rm yo
