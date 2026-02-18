@@ -54,10 +54,10 @@ cat << done > /var/named/zones/forward.ncaecybergames.org
 ;
 @       IN      NS      $name
 $name   IN      A       $ip
-ns1     IN      A       172.18.13.$team
-www     IN      A       172.18.13.$team
-files   IN      A       172.18.14.$team
-shell   IN      A       172.18.14.$team
+ns1     IN      A       172.18.$team.1
+www     IN      A       172.18.$team.1
+files   IN      A       172.18.$team.15
+shell   IN      A       172.18.$team.15
 done
 
 cat << done > /var/named/zones/reverse.ncaecybergames.org
@@ -70,10 +70,10 @@ cat << done > /var/named/zones/reverse.ncaecybergames.org
                           86400 )       ; Negative Cache TTL
 ;
 @       IN      NS      $name.
-$team.13        IN      PTR     ns1.team$team.ncaecybergames.org.
-$team.13        IN      PTR     www.team$team.ncaecybergames.org.
-$team.14        IN      PTR     files.team$team.ncaecybergames.org.
-$team.14        IN      PTR     shell.team$team.ncaecybergames.org.
+$team.1        IN      PTR     ns1.team$team.ncaecybergames.org.
+$team.1        IN      PTR     www.team$team.ncaecybergames.org.
+$team.15        IN      PTR     files.team$team.ncaecybergames.org.
+$team.15        IN      PTR     shell.team$team.ncaecybergames.org.
 done
 
 cat << done > /var/named/zones/forward.team.net
